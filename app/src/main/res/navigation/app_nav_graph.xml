@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/coursesFragment">
+
+    <fragment
+        android:id="@+id/plateformsFragment"
+        android:name="com.example.fragmentapp.ui.fragments.plateformsFragment"
+        android:label="fragment_plateforms"
+        tools:layout="@layout/fragment_plateforms" >
+        <action
+            android:id="@+id/action_plateformsFragment_to_addPlateformFragment"
+            app:destination="@id/addPlateformFragment" />
+    </fragment>
+    <fragment android:id="@+id/placeholder" >
+        <action
+            android:id="@+id/action_placeholder_to_coursesFragment2"
+            app:destination="@id/coursesFragment" />
+        <action
+            android:id="@+id/action_placeholder_to_completedFragment"
+            app:destination="@id/completedFragment" />
+        <action
+            android:id="@+id/action_placeholder_to_plateformsFragment"
+            app:destination="@id/plateformsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.example.fragmentapp.ui.fragments.coursesFragment"
+        android:label="fragment_courses"
+        tools:layout="@layout/fragment_courses" >
+        <action
+            android:id="@+id/action_coursesFragment_to_courseDetailsFragment"
+            app:destination="@id/courseDetailsFragment" />
+        <action
+            android:id="@+id/action_coursesFragment_to_editCourseFragment"
+            app:destination="@id/editCourseFragment" />
+        <action
+            android:id="@+id/action_coursesFragment_to_addCourseFragment"
+            app:destination="@id/addCourseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="com.example.fragmentapp.ui.fragments.addCourseFragment"
+        android:label="fragment_add_course"
+        tools:layout="@layout/fragment_add_course" />
+    <fragment
+        android:id="@+id/addPlateformFragment"
+        android:name="com.example.fragmentapp.ui.fragments.addPlateformFragment"
+        android:label="fragment_add_plateform"
+        tools:layout="@layout/fragment_add_plateform" />
+    <fragment
+        android:id="@+id/completedFragment"
+        android:name="com.example.fragmentapp.ui.fragments.completedFragment"
+        android:label="fragment_completed"
+        tools:layout="@layout/fragment_completed" >
+        <action
+            android:id="@+id/action_completedFragment_to_courseDetailsFragment"
+            app:destination="@id/courseDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseDetailsFragment"
+        android:name="com.example.fragmentapp.ui.fragments.courseDetailsFragment"
+        android:label="fragment_course_details"
+        tools:layout="@layout/fragment_course_details" />
+    <fragment
+        android:id="@+id/editCourseFragment"
+        android:name="com.example.fragmentapp.ui.fragments.editCourseFragment"
+        android:label="fragment_edit_course"
+        tools:layout="@layout/fragment_edit_course" />
+</navigation>
